@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #666;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            gap: 20px;
+        }
+        main {
+            flex: 3;
+            min-width: 300px;
+        }
+        article {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        aside {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid #555;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mi Blog Personal</h1>
+    <p>Compartiendo ideas y conocimientos</p>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+    <a href="#">Sobre mí</a>
+    <a href="#">Contacto</a>
+</nav>
+
+<div class="container">
+    <main>
+        <article>
+            <h2>Primer artículo</h2>
+            <small>Publicado el 11 de agosto de 2025</small>
+            <p>Bienvenido a mi blog. Aquí podrás encontrar artículos, ideas y reflexiones. Puedes modificar este contenido como quieras.</p>
+        </article>
+
+        <article>
+            <h2>Segundo artículo</h2>
+            <small>Publicado el 10 de agosto de 2025</small>
+            <p>Este es otro ejemplo de artículo para que veas cómo se estructuran las publicaciones.</p>
+        </article>
+    </main>
+
+    <aside>
+        <h3>Sobre mí</h3>
+        <p>Soy el autor de este blog. Me apasiona escribir y compartir conocimientos.</p>
+        <h3>Enlaces</h3>
+        <ul>
+            <li><a href="#">Proyecto 1</a></li>
+            <li><a href="#">Proyecto 2</a></li>
+        </ul>
+    </aside>
+</div>
+
+<footer>
+    <p>&copy; 2025 Mi Blog | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
