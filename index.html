@@ -1,281 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>johan</title>johan R</title>
-  <meta name="description" content="Portfolio profesional - desarrollador Minimalista, accesible y responsive." />
-
-  <style>
-    /* ==========================
-       Variables y resets
-       ========================== */
-    :root{
-      --bg: #fff;
-      --card: #f7f7fb;
-      --text: #0f1724;
-      --muted: #6b7280;
-      --accent: #4f46e5; /* indigo */
-      --glass: rgba(255,255,255,0.6);
-      --radius: 14px;
-      --maxw: 1100px;
-      --shadow: 0 6px 20px rgba(15,23,36,0.06);
-    }
-
-    [data-theme="dark"]{
-      --bg: #0b1220;
-      --card: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      --text: #e6eef8;
-      --muted: #9aa6b2;
-      --accent: #7c3aed;
-      --glass: rgba(255,255,255,0.04);
-      --shadow: 0 8px 30px rgba(2,6,23,0.6);
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.45;
-      -webkit-touch-callout:none;
-      padding:32px 16px;
-    }
-
-    /* Container */
-    .wrap{max-width:var(--maxw);margin:0 auto}
-
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{
-      width:64px;height:64px;border-radius:16px;display:grid;place-items:center;font-weight:700;font-size:20px;
-      background:linear-gradient(135deg,var(--accent), #f472b6);color:white;box-shadow:var(--shadow)
-    }
-    h1{font-size:20px;margin:0}
-    p.lead{margin:0;font-size:13px;color:var(--muted)}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;margin-top:28px}
-    @media (max-width:880px){.hero{grid-template-columns:1fr;}}
-
-    .intro h2{font-size:32px;margin:0 0 10px 0}
-    .intro p{color:var(--muted);margin:0 0 18px 0}
-    .cta{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px;display:inline-flex;gap:8px;align-items:center}
-    .btn-primary{background:var(--accent);color:white;box-shadow:0 8px 20px rgba(79,70,229,0.18)}
-    .btn-ghost{border:1px solid rgba(0,0,0,0.06);background:transparent;color:var(--text)}
-    [data-theme="dark"] .btn-ghost{border-color:rgba(255,255,255,0.06)}
-
-    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);}
-
-    /* Projects */
-    .projects{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media (max-width:1100px){.projects{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.projects{grid-template-columns:1fr}}
-
-    .project{border-radius:12px;padding:14px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));border:1px solid rgba(0,0,0,0.04)}
-    [data-theme="dark"] .project{background:transparent;border:1px solid rgba(255,255,255,0.03)}
-    .project h4{margin:0 0 6px 0}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(0,0,0,0.04)}
-
-    /* About + Skills */
-    .two-col{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:28px}
-    @media (max-width:880px){.two-col{grid-template-columns:1fr}}
-    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    .skill{background:var(--glass);padding:10px;border-radius:10px;font-size:13px;color:var(--muted)}
-
-    /* Contact */
-    form{display:flex;flex-direction:column;gap:10px}
-    input,textarea{padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);background:transparent;color:var(--text)}
-    [data-theme="dark"] input,[data-theme="dark"] textarea{border-color:rgba(255,255,255,0.04)}
-    button[type="submit"]{background:var(--accent);color:white;border:0;padding:12px;border-radius:10px;font-weight:600}
-
-    footer{margin-top:40px;padding-top:20px;border-top:1px solid rgba(0,0,0,0.04);color:var(--muted);font-size:13px}
-
-    /* small utilities */
-    .muted{color:var(--muted)}
-    .center{display:flex;align-items:center;gap:10px}
-
-    /* accessibility focus */
-    a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(79,70,229,0.16);outline-offset:2px}
-  </style>
+  <meta charset="UTF-8">
+  <title>Mi Hoja de Vida</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="wrap" id="page">
-    <header>
-      <div class="brand">
-        <div class="logo"> JR</div>
-        <div>
-          <h1>Jhon R.</h1>
-          <p class="lead">Desarrollador • Arquitecto de software </p>
-        </div>
-      </div>
-
-      <div class="center">
-        <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" title="Cambiar tema">🌓 Tema</button>
-        <a class="btn btn-ghost" href="#contact">Contacto</a>
-        <a class="btn" href="#projects">Proyectos</a>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="intro">
-          <h2>Hola — soy Johan.</h2>
-          <p class="muted">Construyo aplicaciones web y moviles que sean facil y administrable por lo propios clintes  </p>
-
-          <div class="cta" style="margin-top:18px">
-            <a class="btn btn-primary" href="#contact">Contratar</a>
-            <a class="btn btn-ghost" href="/assets/Jhon_R_CV.pdf" download>Descargar CV</a>
-          </div>
-
-          <p class="muted" style="margin-top:14px;font-size:13px">Disponibilidad: Freelance / Contrato</p>
-        </div>
-
-        <aside>
-          <div class="card" style="text-align:center">
-            <div style="width:96px;height:96px;border-radius:18px;margin:0 auto;background:linear-gradient(135deg,var(--accent),#fb7185);display:grid;place-items:center;color:#fff;font-weight:700;font-size:26px">JR</div>
-            <p style="margin:12px 0 6px 0;font-weight:600">Johan riascos.</p>
-            <p class="muted" style="font-size:13px;margin:0">Software</p>
-
-            <div style="margin-top:12px;display:flex;justify-content:center;gap:8px">
-              <a class="btn btn-ghost" href="mailto:"johanriascos1920@gmail.com">✉️ Email</a>
-              <a class="btn btn-ghost" href="#contact">📅 Agenda</a>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="projects" style="margin-top:26px">
-        <h3 style="margin:0 0 6px 0">Proyectos destacados</h3>
-        <p class="muted" style="margin:0 0 12px 0">Selección breve de trabajos recientes — enlaces y descripciones cortas.</p>
-
-        <div class="projects">
-          <article class="project" tabindex="0">
-            <h4>Producto A</h4>
-            <p class="muted">Desarrollo full-stack de plataforma de e‑commerce con integración de pagos y panel administrativo.</p>
-            <div class="tags" aria-hidden="true">
-              <span class="tag">React</span>
-              <span class="tag">Node</span>
-              <span class="tag">Postgres</span>
-            </div>
-          </article>
-
-          <article class="project" tabindex="0">
-            <h4>Producto B</h4>
-            <p class="muted">Optimización de rendimiento y accesibilidad en sitio gubernamental (auditorías y mejoras).</p>
-            <div class="tags" aria-hidden="true">
-              <span class="tag">Performance</span>
-              <span class="tag">A11y</span>
-            </div>
-          </article>
-
-          <article class="project" tabindex="0">
-            <h4>Producto C</h4>
-            <p class="muted">Arquitectura de microservicios y pipelines CI/CD para SaaS con despliegue en Kubernetes.</p>
-            <div class="tags" aria-hidden="true">
-              <span class="tag">Docker</span>
-              <span class="tag">K8s</span>
-              <span class="tag">CI/CD</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="two-col">
-        <div>
-          <h3>Sobre mí</h3>
-          <p class="muted">Trabajo con equipos pequeños y medianos para llevar ideas desde el prototipo hasta producción. Me enfoco en calidad de código, experiencia de usuario, fiabilidad operacional y performance.</p>
-
-          <div style="margin-top:14px">
-            <h4 style="margin:0 0 8px 0">Lo que hago</h4>
-            <ul class="muted" style="margin:0;padding-left:18px">
-              <li>Backend: Node.js, Python</li>
-              <li>Frontend: HTML, CSS, React, TypeScript</li>
-              <li>Infra & DevOps: Docker, Kubernetes, CI/CD</li>
-              <li>Diseño: Figma, accesibilidad (WCAG)</li>
-            </ul>
-          </div>
-        </div>
-
-        <aside>
-          <div class="card">
-            <h4 style="margin:0 0 10px 0">Habilidades</h4>
-            <div class="skills">
-              <div class="skill">Arquitectura de software</div>
-              <div class="skill">Optimización de rendimiento</div>
-              <div class="skill">Testing & QA</div>
-              <div class="skill">CI/CD / Infra</div>
-            </div>
-
-            <div style="margin-top:12px">
-              <h5 style="margin:0 0 6px 0">Contactos</h5>
-              <p class="muted" style="margin:0">✉️ johanriascos1920@gmail.com</p>
-              <p class="muted" style="margin:0">📞 +57 314 506 1037</p>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="contact" style="margin-top:26px">
-        <h3>Contacto</h3>
-        <p class="muted">¿Tienes un proyecto o quieres hablar? Envía un mensaje rápido.</p>
-
-        <div style="margin-top:10px;max-width:640px">
-          <form onsubmit="handleForm(event)">
-            <input id="name" name="name" placeholder="Tu nombre" required />
-            <input id="email" name="email" type="email" placeholder="Tu correo" required />
-            <textarea id="message" name="message" rows="5" placeholder="Mensaje" required></textarea>
-            <button type="submit">Enviar mensaje</button>
-          </form>
-
-          <p id="formNote" class="muted" style="margin-top:8px;font-size:13px">O envía un correo directo a <a href="mailto:jhon@example.com">jhon@example.com</a></p>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-        <div class="muted">© <span id="year"></span> Jhon R. — Hecho con cuidado.</div>
-        <div class="muted">Diseño minimal • Accesible • Responsive</div>
-      </div>
-    </footer>
+  <div id="presentacion personal">
+    <img id="foto" src="ruta/a/imagen.jpg" alt="Foto de presentación">
+    <p id="descripcion">estudiante de 7° semestre …</p>
   </div>
 
-  <script>
-    // Tema: detecta preferencia y permite alternar
-    const root = document.documentElement;
-    const page = document.getElementById('page');
-    const btn = document.getElementById('themeToggle');
+  <section id="academico">
+    <h2>Historial</h2>
+    <ul id="lista-academico"></ul>
+    <!-- Botón y formulario para agregar -->
+    <input type="text" id="input-academico" placeholder="tecnologia en sitemas">
+    <button id="btn-agregar-academico">Agregar</button>
+  </section>
 
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDark = saved ? saved === 'dark' : prefersDark;
-    if(isDark) document.documentElement.setAttribute('data-theme','dark');
+  <section id="laboral">
+    <h2>Historial laboral</h2>
+    <ul id="lista-laboral"></ul>
+    <input type="text" id="input-laboral" placeholder="Nuevo puesto/empresa">
+    <button id="btn-agregar-laboral">Agregar</button>
+  </section>
 
-    btn.addEventListener('click', ()=>{
-      const now = document.documentElement.getAttribute('data-theme') === 'dark';
-      if(now){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');btn.setAttribute('aria-pressed','false');}
-      else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');btn.setAttribute('aria-pressed','true');}
-    });
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul id="lista-habilidades"></ul>
+    <input type=" en java , python entre otros id="input-habilidad-nombre" placeholder="habilidad">
+    <input type="text" id="input-habilidad-nivel" placeholder="Nivel (tecnologia en sitemas , tecnico en contable)">
+    <button id="btn-agregar-habilidad">Agregar habilidad</button>
+  </section>
 
-    // Form: evita backend real. Envía un mailto como fallback.
-    function handleForm(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent('Nuevo mensaje desde portfolio: ' + name);
-      const body = encodeURIComponent('Nombre: '+name+'
-Correo: '+email+'
-
-'+message);
-      window.location.href = `mailto:jhon@example.com?subject=${subject}&body=${body}`;
-    }
-
-    // año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
